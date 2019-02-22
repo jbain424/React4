@@ -1,0 +1,42 @@
+.userContainer {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  border: 200px;
+}
+
+.userProfile {
+  font-family: helvetica neue;
+  color: #333;
+  letter-spacing: -.4px;
+  flex-direction: row;
+  font-weight: bold;
+  padding-top: 180px;
+  padding-left: 200px;
+  font-size: 36px;
+
+}
+
+.followers{
+  font-family: helvetica neue;
+  grid-column: 1/2;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+
+#userPic {
+  border-radius: 50%;
+  width: 106px;
+  height: 106px;
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: 155px;
+  margin-left: 500px;
+
+
+
+
+
+
+}

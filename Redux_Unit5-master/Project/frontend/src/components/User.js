@@ -1,15 +1,22 @@
-// import React from 'react';
-// import axios from 'axios';
-// import '../css/User.css';
-//
-//
-// export const User = ({ username }) => {
-//   return(
-//     <div classname="userProfile">
-//       <img src={username} alt="" className="img"/>
-//     </div>
-//   )
-// }
-//
-//
-// export default User
+import React from 'react';
+import '../css/User.css';
+
+
+export const User = ({ username }) => {
+  return(
+    <>
+  <div className="userContainer">
+      <div className="userProfile">
+        { username.username }
+        <p className="followers"> 10 followers • 5 following </p>
+      </div>
+
+      <img id="userPic"src={username.profile_pic} alt="" />
+  </div>
+
+    </>
+  )
+}
+
+
+export default User

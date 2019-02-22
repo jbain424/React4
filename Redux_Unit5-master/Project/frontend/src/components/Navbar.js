@@ -5,7 +5,7 @@ import '../css/NavBar.css';
 let logo = require('../assets/epingle_logo.png');
 let magGlass = require('../assets/magnifying_glass copy.png')
 
-const Navbar = () => {
+const Navbar = (props) => {
   return(
     <>
     <nav>
