@@ -1,7 +1,7 @@
 const { db } = require('./index.js');
 
 const getAllUsers = (req, res, next) => {
-  db.any('SELECT * FROM users')
+  db.any('SELECT * FROM username')
   .then(data => {
     res.status(200)
     .json({
@@ -15,7 +15,7 @@ const getAllUsers = (req, res, next) => {
 
 const getOneUser = (req, res, next) => {
   let userId = parseInt(req.params.id)
-  db.one('SELECT * FROM users WHERE id=$1', userId)
+  db.one('SELECT * FROM username WHERE id=$1', userId)
   .then(data => {
     res.status(200)
     .json({
@@ -29,7 +29,7 @@ const getOneUser = (req, res, next) => {
 
 
 const addOneUser = (req, res, next) => {
-  db.none('INSERT INTO users (username, email, profile_pic) VALUES (${username}, ${email}, ${profile_pic})', req.body)
+  db.none('INSERT INTO username (username, email, profile_pic) VALUES (${username}, ${email}, ${profile_pic})', req.body)
   .then(data => {
     res.status(200)
     .json({
@@ -50,7 +50,7 @@ const updateOneUser = (req, res, next) => {
   });
   let queryString = queryStringArray.join(", ")
   db.none(
-      "UPDATE users SET " + queryString + " WHERE id=" + req.params.id, req.body
+      "UPDATE username SET " + queryString + " WHERE id=" + req.params.id, req.body
     )
     .then(() => {
       res.status(200)
@@ -64,7 +64,7 @@ const updateOneUser = (req, res, next) => {
 
 const deleteOneUser = (req, res, next) => {
   let userId = parseInt(req.params.id);
-  db.result('DELETE FROM users WHERE id=$1', userId)
+  db.result('DELETE FROM username WHERE id=$1', userId)
   .then((result) => {
     res.status(200)
   .json({

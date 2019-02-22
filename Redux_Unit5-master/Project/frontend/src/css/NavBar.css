@@ -1,0 +1,107 @@
+body {
+  background-color: white;
+}
+.navContainer {
+  font-family: 'helvetica neue', sans-serif;
+  font-size: 16px;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 75px;
+
+}
+
+.leftNav  {
+  display: inline-flex;
+  background-color: white;
+
+}
+
+.leftNav :link {
+  text-decoration: none;
+  background-color: white;
+  border-style: none;
+
+}
+
+.rightNav {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 300px;
+  font-weight: bold;
+  vertical-align: top;
+  padding-top: 25px;
+  padding-left: 10px;
+  background-color: white;
+
+}
+
+.rightNav :link {
+  text-decoration: none;
+  background-color: white;
+  border-radius: 20px;
+  border-style: none;
+  display: flex;
+  padding: 10px 10px 10px 10px
+
+}
+
+.homelogo{
+  padding-right: 20px;
+  border-style: none;
+  padding-left: 20px;
+  background-color: white;
+}
+
+
+.navContainer a:hover{
+  background-color: #efefef;
+  border-radius: 20px;
+  border-style: none;
+  display: flex;
+
+}
+
+
+.navContainer a:visited{
+  color: #929292;
+
+}
+.navContainer a:active {
+  color: black;
+  background-color: #efefef;
+}
+
+
+
+.magGlass {
+  background-color: #efefef;
+  border-radius: 4px 0px 0px 4px;
+  border-style: none;
+  width: auto;
+  height: 41px;
+  margin-top: 20px;
+  padding-left: 8px
+
+}
+
+.searchBar {
+  width: 695px;
+  height: 25px;
+  padding: 8px;
+  margin-bottom: 5px;
+  font-family: helvetica;
+  font-size: 18px;
+  background-color: #efefef;
+  border-radius: 0px 4px 4px 0px;
+  border-style: none;
+  font-weight: bold;
+  margin-top: 20px;
+
+}
+
+hr {
+  width: 200%;
+  margin-left: -50%;
+  opacity: 0.2;
+}

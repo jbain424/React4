@@ -1,0 +1,62 @@
+#pinBackground{
+  background-image: linear-gradient(#eeeeee, white);
+}
+.pinContainer {
+  font-family: helvetica neue;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 10% 10% 5% 75%;
+  align-content: center;
+  background-color: white;
+  padding-left: 200px;
+  padding-top: 300px;
+  padding-right: 200px;
+  background: white;
+
+
+}
+
+.pinImg{
+  grid-column: 1;
+  border-radius: 10px;
+
+}
+
+#img {
+  border-radius: 8px;
+}
+
+/* #whitebox {
+  background-color: white;
+  width: 500px;
+  height: 500px;
+
+} */
+
+.pinName{
+  grid-template-columns: 2 / 1;
+  font-size: 24px;
+  font-weight: bold;
+
+}
+
+.pinCaption{
+  grid-column: 2 / 2;
+}
+
+.psAndComs{
+  grid-column: 2 / 3;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#input {
+  width: 300px;
+  height: 500px;
+  align-content: flex-start;
+  border-style: 1px;
+}
+.pinComment {
+  grid-column: 2 / 4;
+  width: 300px;
+}
