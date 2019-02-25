@@ -1,19 +1,63 @@
-.userContainer {
+.userpage {
   display: grid;
-  grid-template-columns: 30% 70%;
-  border: 200px;
+  grid-template-columns: 80% 20%;
+  box-sizing: border-box;
+  width: 800px;
+  height: 48px;
+  padding-top: 90px;
+  vertical-align: middle;
+  margin-left: 250px;
+}
+
+.boardsNpins {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-family: helvetica neue;
+  font-weight: bold;
+  color: #efefef;
+
+
+}
+
+.boardsNpins a:link{
+  text-decoration: none;
+  background-color: white;
+  border-radius: 20px;
+  border-style: none;
+  padding: 10px 10px 10px 10px;
+}
+
+.boardsNpins a:hover{
+  text-decoration: underline;
+  background-color: #efefef;
+  border-radius: 20px;
+  border-style: none;
+}
+
+.boardsNpins a:visited{
+  color: #929292;
+}
+
+.boardsNpins a:active{
+  color: black;
+}
+
+.userContainer {
+  grid-column: 1 / 1;
+
 }
 
 .userProfile {
+  grid-column: 1 / 2;
   font-family: helvetica neue;
   color: #333;
   letter-spacing: -.4px;
   flex-direction: row;
   font-weight: bold;
-  padding-top: 180px;
-  padding-left: 200px;
   font-size: 36px;
-
+  padding-left: 18px;
 }
 
 .followers{
@@ -21,22 +65,21 @@
   grid-column: 1/2;
   font-size: 14px;
   font-weight: bold;
+  padding-top: 5px;
 }
 
+.buttons a:hover{
+  background-color: #efefef;
+  border-style: none;
 
+}
 
 #userPic {
   border-radius: 50%;
-  width: 106px;
-  height: 106px;
-  grid-column: 2;
-  grid-row: 1;
-  margin-top: 155px;
-  margin-left: 500px;
-
-
-
-
-
+  grid-column: 2 / 2;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  align-self: flex-end;
 
 }
