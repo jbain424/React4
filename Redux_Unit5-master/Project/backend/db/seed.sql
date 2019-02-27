@@ -8,6 +8,7 @@ DROP TABLE IF EXISTS username;
 CREATE TABLE username (
   id SERIAL PRIMARY KEY,
   username VARCHAR UNIQUE NOT NULL,
+  password_digest VARCHAR NOT NULL,
   email VARCHAR NOT NULL,
   profile_pic VARCHAR
 );
@@ -28,7 +29,7 @@ CREATE TABLE boards (
   board_name VARCHAR NOT NULL
 );
 
-INSERT INTO username (username, email, profile_pic) VALUES ('jojo424', 'jonellebain@pursuit.org', 'https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg'), ('sexisammy20', 'samantha.clement@gmail.com', 'https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg'), ('misscobracommander', 'misscobracommander@gmail.com', 'https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg'), ('misterbain', 'mrbain@gmail.com', 'https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg'), ('douka_m', 'doukam@gmail.com', 'https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg'), ('jmax', 'jmax@gmail.com', 'https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg'), ('phyllisb', 'phyllisb@pursuit.org', 'https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg'), ('royanb', 'royanb@gmail.com', 'https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg');
+INSERT INTO username (username, password_digest, email, profile_pic) VALUES ('jojo424', 'jonellebain@pursuit.org', 'https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg'), ('sexisammy20', 'samantha.clement@gmail.com', 'https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg'), ('misscobracommander', 'misscobracommander@gmail.com', 'https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg'), ('misterbain', 'mrbain@gmail.com', 'https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg'), ('douka_m', 'doukam@gmail.com', 'https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg'), ('jmax', 'jmax@gmail.com', 'https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg'), ('phyllisb', 'phyllisb@pursuit.org', 'https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg'), ('royanb', 'royanb@gmail.com', 'https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg');
 
 INSERT INTO pins (user_id, board_id, pin_name, pin_url, pin_caption) VALUES
 (1, 1, 'Cats', 'https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg', 'This is were to find out all about cats!'),

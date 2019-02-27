@@ -10,6 +10,7 @@ export const User = ({ username, userPins }) => {
   return(
   <>
     <div className="userContainer">
+
       <span className="buttons">
         <Link to={"/"}>
         <img className='createPin' alt="logo" src={plus} /></Link>
@@ -19,15 +20,18 @@ export const User = ({ username, userPins }) => {
 
         <Link to={"/"}>
         <img className='sharePin' alt="logo" src={share} /></Link>
+
       </span>
     </div>
 
+    <div className="userInfo">
     <div className="userProfile">
-        { username.username }
-        <p className="followers"> 10 followers • 5 following </p>
+      { username.username }
+      <p className="followers"> 10 followers • 5 following </p>
     </div>
 
     <img id="userPic"src={username.profile_pic} alt="" />
+    </div>
 
     <div className="boardsNpins">
       <div className="boards">

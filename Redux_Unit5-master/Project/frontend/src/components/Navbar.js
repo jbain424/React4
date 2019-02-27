@@ -21,7 +21,7 @@ const Navbar = (props) => {
           <div className="rightNav">
             <Link to='/'>Home</Link>
             <Link to='/following'>Following</Link>
-            <Link to={"/username"}>Username</Link>
+            <Link to="/username">Username</Link>
           </div>
 
           <hr></hr>

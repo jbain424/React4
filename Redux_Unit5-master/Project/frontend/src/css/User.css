@@ -1,19 +1,28 @@
-.userpage {
+.userContainer {
   display: grid;
   grid-template-columns: 80% 20%;
   box-sizing: border-box;
-  width: 800px;
+  width: 950px;
   height: 48px;
   padding-top: 90px;
   vertical-align: middle;
   margin-left: 250px;
 }
 
+.userInfo{
+  display: grid;
+  grid-template-columns: 80% 20%;
+  width: 800px;
+  height: 100px;
+  padding-left: 250px;
+  padding-top: 100px;
+}
+
 .boardsNpins {
   display: flex;
   flex-direction: row;
-  padding-top: 10px;
-  padding-left: 10px;
+  padding-top: 0px;
+  padding-left: 255px;
   font-family: helvetica neue;
   font-weight: bold;
   color: #efefef;
@@ -44,10 +53,6 @@
   color: black;
 }
 
-.userContainer {
-  grid-column: 1 / 1;
-
-}
 
 .userProfile {
   grid-column: 1 / 2;
@@ -60,7 +65,7 @@
   padding-left: 18px;
 }
 
-.followers{
+.followers {
   font-family: helvetica neue;
   grid-column: 1/2;
   font-size: 14px;
@@ -68,17 +73,51 @@
   padding-top: 5px;
 }
 
-.buttons a:hover{
+.createPin {
+  background-color: white;
+  padding: 4px 4px 4px 4px;
+  border-radius: 50%;
+}
+
+.editPin{
+  background-color: white;
+  padding: 4px 4px 4px 4px;
+  border-radius: 50%;
+
+}
+.sharePin{
+  background-color: white;
+  padding: 4px 4px 4px 4px;
+  border-radius: 50%;
+}
+
+.createPin a:hover{
   background-color: #efefef;
+  padding: 4px 4px 4px 4px;
+  border-radius: 50%;
+  border-style: none;
+}
+
+.editPin a:hover {
+  background-color: #efefef;
+  padding: 4px 4px 4px 4px;
+  border-radius: 50%;
   border-style: none;
 
 }
+.sharePin a:hover {
+  background-color: #efefef;
+  padding: 4px 4px 4px 4px;
+  border-radius: 50%;
+  border-style: none;
+}
+
 
 #userPic {
   border-radius: 50%;
   grid-column: 2 / 2;
-  width: 90px;
-  height: 90px;
+  width: 106px;
+  height: 106px;
   object-fit: cover;
   align-self: flex-end;
 
