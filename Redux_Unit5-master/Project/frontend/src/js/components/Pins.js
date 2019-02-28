@@ -1,10 +1,9 @@
-import React from 'react'
+import React from "react";
 
-class Pins extends React.Component {
-  render () {
-    return()
-
-  }
-}
-
-export default Pins;
+export const Pins = () => {
+  return (
+    <>
+      <h1>Pins</h1>
+    </>
+  );
+};

@@ -1,10 +1,9 @@
-import React from 'react'
+import React from "react";
 
-class NavLogo extends React.Component {
-  render () {
-    return()
-
-  }
-}
-
-export default NavLogo;
+export const NavLogo = () => {
+  return (
+    <>
+      <h1>NavLogo</h1>
+    </>
+  );
+};

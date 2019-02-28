@@ -1,9 +1,9 @@
 import React from "react";
 
-export const NavSearch = () => {
+export const Main = () => {
   return (
     <>
-      <h1>NavSearch</h1>
+      <h1>Main</h1>
     </>
   );
 };
