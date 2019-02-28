@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
-import "./css/NavBar.css";
+// import "./css/NavBar.css";
 import { matchPath } from "react-router";
 
 import Navbar from "./components/Navbar.js";
