@@ -1,4 +1,5 @@
-const { db } = require('./index.js');
+const  db  = require('./index.js');
+const authHelpers = require('../../auth/helpers.js')
 
 const getAllUsers = (req, res, next) => {
   db.any('SELECT * FROM username')
@@ -76,6 +77,44 @@ const deleteOneUser = (req, res, next) => {
   .catch(err => next(err));
 }
 
+function createUser(req, res, next) {
+  const hash = authHelpers.createHash(req.body.password);
+
+  db.none(
+    'INSERT INTO username (username, password_digest, email, profile_pic) VALUES (${username}, ${password_digest}, ${email}, ${profile_pic})',
+    { username: req.body.username,
+      password_digest: hash,
+      email: req.body.email,
+      profile_pic: req.body.profile_pic }
+  )
+    .then(() => {
+      res.status(200).json({
+        message: "Registration successful."
+      });
+    })
+    .catch(err => {
+      next(err);
+    });
+}
+function logoutUser(req, res, next) {
+  req.logout();
+  res.status(200).json({ message: "Log Out Success" });
+}
+
+function loginUser(req, res) {
+  res.json(req.user);
+}
+
+function isLoggedIn(req, res) {
+  if (req.user) {
+    res.json({ username: req.user });
+  } else {
+    res.status(401).json({ err: "Nobody Logged In" });
+  }
+}
 
 
-module.exports = { getAllUsers, getOneUser, addOneUser, updateOneUser, deleteOneUser };
+
+
+
+module.exports = { getAllUsers, getOneUser, addOneUser, updateOneUser, deleteOneUser, createUser, loginUser, logoutUser, isLoggedIn };

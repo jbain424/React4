@@ -1,23 +1,24 @@
-import React, { Component } from 'react';
-import { Route, Switch, withRouter } from 'react-router-dom';
-import './css/NavBar.css';
-import { matchPath } from 'react-router'
+import React, { Component } from "react";
+import { Route, Switch, withRouter } from "react-router-dom";
+import "./css/NavBar.css";
+import { matchPath } from "react-router";
 
-import Navbar from './components/Navbar.js'
-import Home from './components/Home.js'
+import Navbar from "./components/Navbar.js";
+import Home from "./components/Home.js";
 import Pins from './components/Pins.js'
-import User from './components/User.js'
+import User from "./components/User.js";
+import Boards from "./components/Boards.js";
 
 import { getUser } from "./util/util.js";
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       username: "",
       userPic: "",
-      boards: [],
-    }
+      boards: []
+    };
   }
 
   componentDidMount() {
@@ -25,12 +26,12 @@ class App extends Component {
       path: "/username/:id",
       exact: true,
       strict: false
-    })
+    });
 
     if (match) {
-      getUser(match.params.id)
-      .then(response =>
-      this.setState({ username: response.data.data }));
+      getUser(match.params.id).then(response =>
+        this.setState({ username: response.data.data })
+      );
     }
   }
 
@@ -41,16 +42,15 @@ class App extends Component {
         <Navbar />
         <main>
           <Switch>
-        <Route exact path='/' component={Home}/>
+            <Route exact path="/" component={Home} />
 
-        <Route path='/pins/:id' component={Pins}/>
+            <Route path="/pins/:id" component={Pins} />
 
-        <Route path='/username/:id' render={props => (
-            <User
-              {...props} username={username}
+            <Route
+              path="/username/:id"
+              render={props => <User {...props} username={username} />}
             />
-          )}
-        />
+          <Route path="/boards/:id/boards" component={Boards}/>
           </Switch>
         </main>
       </div>

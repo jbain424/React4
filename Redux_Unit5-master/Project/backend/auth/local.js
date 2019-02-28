@@ -9,7 +9,7 @@ const db = pgp(connectionString);
 
 passport.use(
   new LocalStrategy((username, password, done) => {
-    db.one("SELECT * FROM users WHERE username = ${username}", {
+    db.one("SELECT * FROM username WHERE username = ${username}", {
       username: username
     })
       .then(user => {

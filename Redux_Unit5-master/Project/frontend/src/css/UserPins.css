@@ -1,0 +1,27 @@
+.allUserImgs {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding-top: 100px;
+    padding-left: 100px;
+    margin-right: 100px;
+    grid-row-gap: 20px;
+  }
+
+
+.allPins {
+  grid-column: 2;
+  border-radius: 20px;
+  width: 236px;
+  height: auto;
+  background-color: white;
+  border-style: none;
+  padding: 10px 10px 10px 10px;
+  z-index: -200px;
+  repeat: (auto-fill, minmax(250px,1fr))
+
+}
+
+.allPins a:hover{
+  color: #efefef;
+  padding: 10px 10px 10px 10px;
+}
